@@ -174,13 +174,14 @@ This will build the containers and place all other related files into the struct
 
 Then I navigated to the portainer GUI from earlier to review the containers I just created, check their logs, and ensure that they were functioning. They were running but not communicating properly. By troubleshooting I realized that I needed to change some of the following items:
 
-•	`docker-compose.yaml`
-•	remove `Version: 3`
-•	change each volume path from `home/ubuntu`, to `home/blaine`
-•	comment out all lines with `proxy` data (may set up proxy later)
-•	find the GID of Docker in Ubuntu and change the line `user:`
-•	change ‘proxy: external:’ from `true` to `false`
-•	ensure line `network:` read `grafana-montoring: driver: bridge`
+- `docker-compose.yaml`
+- remove `Version: 3`
+- change each volume path from `home/ubuntu`, to `home/blaine`
+- comment out all lines with `proxy` data (may set up proxy later)
+- find the GID of Docker in Ubuntu and change the line `user:`
+- change ‘proxy: external:’ from `true` to `false`
+- ensure line `network:` read `grafana-montoring: driver: bridge`
+
 Later I will discuss the changes to other configuration files as they become relevant. I confirmed that each container was functional by reviewing the log output for each in Portainer. I then went to each container’s webGUI with the IPaddress:port combination and set up usernames and passwords for each one.
 
 
