@@ -21,7 +21,7 @@ In this section I will simply place the Pi 5 board into a case to protect it. Th
 <p align="center">
   <br/>
   <img src="https://imgur.com/7o78bjB.png" height="80%" width="80%" alt="Table"/><br /><br />
-</p>
+</p
 
 In the following image, the Pi 5 board has been placed in the chassis casing and the fan wiring has been plugged in to the appropriate port. The wiring has been carefully placed in a channel that guides the cable from where it exits the fan at A, then follows the wiring channel along B, and finally exits at C, to plug into the fan port on the Pi board.
 
