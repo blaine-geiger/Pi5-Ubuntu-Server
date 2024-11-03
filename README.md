@@ -16,13 +16,19 @@ The Pi 5 is a single board computer with better specifications than previous mod
 - 2 × USB 2.0 ports
 - Gigabit Ethernet, with PoE+ support (requires additional HAT)
 
-In this section I will simply place the Pi 5 board into a case to protect it. The case also includes a fan for better cooling under workload. The Pi 5 board and case are seen below in Figure $. The fan unit is built into the casing mold and can be identified by the wiring. All black portions are made of aluminum, which serves as a great heatsink.
+In this section I will simply place the Pi 5 board into a case to protect it. The case also includes a fan for better cooling under workload. The Pi 5 board and case are seen below in the figure below. The fan unit is built into the casing mold and can be identified by the wiring. All black portions are made of aluminum, which serves as a great heatsink.
 
-#### image-pending
+<p align="center">
+  <br/>
+  <img src="https://imgur.com/7o78bjB.png" height="80%" width="80%" alt="Table"/><br /><br />
+</p>
 
 In the following image, the Pi 5 board has been placed in the chassis casing and the fan wiring has been plugged in to the appropriate port. The wiring has been carefully placed in a channel that guides the cable from where it exits the fan at A, then follows the wiring channel along B, and finally exits at C, to plug into the fan port on the Pi board.
 
-#### image-pending
+<p align="center">
+  <br/>
+  <img src="https://imgur.com/BFUJWKt.png" height="80%" width="80%" alt="Table"/><br /><br />
+</p>
 
 The two images above show the bottom of the casing (colored red) and how it leaves access to the SD card slot exposed. This can be covered with a small plastic lid and affixed with a screw. Finally, the last image shows the completed case construction, which can be opened for access by the two black screws on top.
 
@@ -57,10 +63,13 @@ This is a headless configuration (there is no display connected to the Pi server
 - This will bring up a warning that the device is unknown and the ssh key is not recognized, ‘would you like to store it’?
   - Choose yes and the connection is made, and the encrypted key is stored for later authentication
 
-Below in Figure $, I can see the SSH connection is made to the headless server. Note the IP address has been given by the DHCP server for the lab subnet. Which is subnet 192.168.x.x /24. I will change this IP in the next steps.
+In the figure below, I can see the SSH connection is made to the headless server. Note the IP address has been given by the DHCP server for the lab subnet. Which is subnet 192.168.x.x /24. I will change this IP in the next steps.
 
 
-#### image-pending
+<p align="center">
+  <br/>
+  <img src="https://imgur.com/oEguRC8.png" height="80%" width="80%" alt="Table"/><br /><br />
+</p>
 
 
 
@@ -167,7 +176,10 @@ I then went to the /docker-compose/grafana-monitoring/ directory because that is
 This will build the containers and place all other related files into the structure I have built.
 
 
-#### image pending
+<p align="center">
+  <br/>
+  <img src="https://imgur.com/OOyEGh3.png" height="80%" width="80%" alt="Table"/><br /><br />
+</p>
 
 
 
@@ -185,7 +197,10 @@ Later I will discuss the changes to other configuration files as they become rel
 Navigating to the Portainer webGUI I can see that all the containers are running as they should be, this is where I can investigate the logs for each container for more details as well. This can be done in the server CLI, but GUIs provides a quick method that is easier to interpret for many users.
 
 
-#### image pending
+<p align="center">
+  <br/>
+  <img src="https://imgur.com/iVTv9Mv.png" height="80%" width="80%" alt="Table"/><br /><br />
+</p>
 
 
 ## Grafana
@@ -198,13 +213,14 @@ InfluxDB serves as a time series database (TSDB). It manages large amounts of da
 - Add an organization name and bucket name
 - Create API token (copy and paste into notepad, the key can only be viewed once)
 
-In Figure $ below I can see that InfluxDB can be used to visualize some data, but that is not its main purpose, and it is weaker at this task than Grafana
+In the following image I can see that InfluxDB can be used to visualize some data, but that is not its main purpose, and it is weaker at this task than Grafana
 
 
 
-#### image pending
-
-
+<p align="center">
+  <br/>
+  <img src="https://imgur.com/pnIRg2j.png" height="80%" width="80%" alt="Table"/><br /><br />
+</p>
 
 
 
@@ -236,16 +252,17 @@ As I recently mentioned, Telegraf will scrape data, pass it on to InfluxDB, and 
 
 
 Viewing the custom dashboard in Grafana
-Shown below is the custom dashboard creating by using Grafana to visualize Docker data from InfluxDB after it has been scraped and pushed there by Telegraf. It may seem complicated, and it is, but it follows the path of:
+The figure shown below is the custom dashboard creating by using Grafana to visualize Docker data from InfluxDB after it has been scraped and pushed there by Telegraf. It may seem complicated, and it is, but it follows the path of:
 - Docker running containers for services
 - Telgraf scraping the Docker container data, as well as server metrics, and pushing it to InfluxDB
 - InfluxDB managing and storing this data
 - Grafana acting on this data and organizing it into appealing charts
 
 
-
-#### image pending
-
+<p align="center">
+  <br/>
+  <img src="https://imgur.com/a13v0fb.png" height="80%" width="80%" alt="Table"/><br /><br />
+</p>
 
 
 This is all very customizable and this documentation only scratches the surface of what is possible. I plan to coordinate the other services to organize other data like SIEM, firewall logging, network performance, and configuration changes. Two containers are not running (Loki and Promtail), and I know this from the logs available in Portainer which read:
