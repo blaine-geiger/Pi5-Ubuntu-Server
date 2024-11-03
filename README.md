@@ -6,6 +6,8 @@ Using a Raspberry Pi 5 single board computer, I will configure a server on the h
 
 Mini PCs are also expandable in terms of memory and storage, while having comparable performance at a similar price point. Although they use slightly more power, I feel it is worth the gain in performance. I may convert this work over to an x86 setup later, but for the time being this project will offer valuable experience.
 
+> **Note:** In a later project, I will discuss the use of security configurations to harden these services. Including a reverse proxy (for encryption and SSL certificate management)
+
 ## Hardware Assembly
 The Pi 5 is a single board computer with better specifications than previous models. Some important features include:
 - 2.4GHz quad-core 64-bit Arm Cortex-A76 CPU
@@ -177,9 +179,7 @@ Then I navigated to the portainer GUI from earlier to review the containers I ju
 - `docker-compose.yaml`
 - remove `Version: 3`
 - change each volume path from `home/ubuntu`, to `home/blaine`
-- comment out all lines with `proxy` data (may set up proxy later)
 - find the GID of Docker in Ubuntu and change the line `user:`
-- change ‘proxy: external:’ from `true` to `false`
 - ensure line `network:` read `grafana-montoring: driver: bridge`
 
 Later I will discuss the changes to other configuration files as they become relevant. I confirmed that each container was functional by reviewing the log output for each in Portainer. I then went to each container’s webGUI with the IPaddress:port combination and set up usernames and passwords for each one.
