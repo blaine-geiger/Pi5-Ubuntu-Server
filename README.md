@@ -1,7 +1,8 @@
 # Pi5-Ubuntu-Server
 
 ## Building a Raspberry Pi 5 Ubuntu Server
-Using a Raspberry Pi 5 single board computer, I will configure a server on the home lab subnet created thus far. On this server I plan to set up network services for my local network. The services will provide monitoring and data collection of my lab network, devices, and the server device itself. I am somewhat regretful about choosing the Pi 5 for this project. I have considered using another mini PC with an x86 architecture instead of the ARM64 that the Pi offers. While the ARM64 offers many lightweight application solutions from its community of users. The x86 architecture is superior for compatibility with applications, including enterprise solutions.  
+Using a Raspberry Pi 5 single board computer, I will configure a server on the home lab subnet created thus far. On this server I plan to set up network services for my local network. The services will provide monitoring and data collection of my lab network, devices, and the server device itself. 
+> **Note:** I am somewhat regretful about choosing the Pi 5 for this project. I have considered using another mini PC with an x86 architecture instead of the ARM64 that the Pi offers. While the ARM64 offers many lightweight application solutions from its community of users. The x86 architecture is superior for compatibility with applications, including enterprise solutions (like Kibana).
 
 Mini PCs are also expandable in terms of memory and storage, while having comparable performance at a similar price point. Although they use slightly more power, I feel it is worth the gain in performance. I may convert this work over to an x86 setup later, but for the time being this project will offer valuable experience.
 
