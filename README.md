@@ -125,10 +125,7 @@ network:
 ## Create Portainer docker container
 - `docker pull portainer/portainer-ce:linux-arm64`
 - `docker volume create portainer_data`
-- `docker run -d -p 8000:8000 -p 9443:9443 --name portainer \`
- `-v /var/run/docker.sock:/var/run/docker.sock \`
- `-v portainer_data:/data \`
- `portainer/portainer-ce:linux-arm64`
+- `docker run -d -p 8000:8000 -p 9443:9443 --name portainer \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ portainer/portainer-ce:linux-arm64`
 - Visit GUI `https://pi_address:9443`
 - Setup username and password
 
