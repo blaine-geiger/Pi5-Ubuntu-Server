@@ -234,7 +234,7 @@ As I recently mentioned, Telegraf will scrape data, pass it on to InfluxDB, and 
   ## Multiple URLs can be specified for a single cluster, one ONE of the
   ## urls will be written to each interval.
   ##   ex: ["https://us-west-2-1.aws.cloud2.influxdata.com"]
-  #urls = ["http://influxdb:8086"]
+  #urls = ["http://influxdb:port#"]
 
   ## API token for authentication
   token = "this is where the generated token goes”
