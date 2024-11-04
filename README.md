@@ -6,7 +6,7 @@ Using a Raspberry Pi 5 (8GB RAM) single board computer, I will configure a serve
 
 Mini PCs are also expandable in terms of memory and storage, while having comparable performance at an arguably similar price point. Although they use slightly more power, I feel it is worth the gain in performance. I may convert this work over to an x86 setup later, but for the time being this project will offer valuable experience.
 
-> **Note:** In a later project, I will discuss the use of security configurations to harden these services. Including a reverse proxy service (for encryption and SSL certificate management)
+> **Note:** In a later project, I will discuss security configurations that I have used to harden these services. Including a reverse proxy service (for encryption and SSL certificate management)
 
 ## Hardware Assembly
 The Pi 5 is a single board computer with better specifications than previous models. Some important features include:
