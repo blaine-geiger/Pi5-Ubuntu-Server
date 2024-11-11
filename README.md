@@ -20,14 +20,14 @@ In this section I will simply place the Pi 5 board into a case to protect it. Th
 
 <p align="center">
   <br/>
-  <img src="https://imgur.com/7o78bjB" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/7o78bjB" height="80%" width="80%" alt="Table"/><br /><br />
 </p>
 
 In the following image, the Pi 5 board has been placed in the chassis casing and the fan wiring has been plugged in to the appropriate port. The wiring has been carefully placed in a channel that guides the cable from where it exits the fan at A, then follows the wiring channel along B, and finally exits at C, to plug into the fan port on the Pi board.
 
 <p align="center">
   <br/>
-  <img src="https://imgur.com/BFUJWKt.png" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/BFUJWKt.png" height="80%" width="80%" alt="Table"/><br /><br />
 </p>
 
 The two images above show the bottom of the casing (colored red) and how it leaves access to the SD card slot exposed. This can be covered with a small plastic lid and affixed with a screw. Finally, the last image shows the completed case construction, which can be opened for access by the two black screws on top.
@@ -68,7 +68,7 @@ In the figure below, I can see the SSH connection is made to the headless server
 
 <p align="center">
   <br/>
-  <img src="https://imgur.com/oEguRC8.png" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/oEguRC8.png" height="80%" width="80%" alt="Table"/><br /><br />
 </p>
 
 
@@ -178,7 +178,7 @@ This will build the containers and place all other related files into the struct
 
 <p align="center">
   <br/>
-  <img src="https://imgur.com/OOyEGh3.png" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/OOyEGh3.png" height="80%" width="80%" alt="Table"/><br /><br />
 </p>
 
 
@@ -199,7 +199,7 @@ Navigating to the Portainer webGUI I can see that all the containers are running
 
 <p align="center">
   <br/>
-  <img src="https://imgur.com/iVTv9Mv.png" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/iVTv9Mv.png" height="80%" width="80%" alt="Table"/><br /><br />
 </p>
 
 
@@ -219,7 +219,7 @@ In the following image I can see that InfluxDB can be used to visualize some dat
 
 <p align="center">
   <br/>
-  <img src="https://imgur.com/pnIRg2j.png" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/pnIRg2j.png" height="80%" width="80%" alt="Table"/><br /><br />
 </p>
 
 
@@ -261,7 +261,7 @@ The figure shown below is the custom dashboard creating by using Grafana to visu
 
 <p align="center">
   <br/>
-  <img src="https://imgur.com/a13v0fb.png" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/a13v0fb.png" height="80%" width="80%" alt="Table"/><br /><br />
 </p>
 
 
