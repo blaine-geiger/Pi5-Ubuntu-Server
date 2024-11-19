@@ -140,14 +140,13 @@ network:
 
 
 ## Downloading and editing configuration files
-There are three configuration files I will be concerned with during this section. These will not be written from scratch. I will be using a basic template, but I will need to change a few things to make sure the services communicate and function properly. Each file can be downloaded from GitHub user James Turland at Jims Garage. The three files are:
+There are three configuration files I will be concerned with during this section. The three files are:
 
 - A docker compose file that is similar to a script and allows you to build a configure multiple containers simultaneously.
 - A Prometheus configuration file to specify targets you wish to scrape data from, as well as details regarding which data, how often, etc.
 - A Telegraf configuration file that will scrape data from Docker regarding the containers and their related data (number of containers running, resource usage, etc.) 
 
-These files are configured for the specifics of James’ network, and I will need to change many things to make them work for my scenario. This is a trial-and-error process that requires a lot of troubleshooting to achieve functionality. I will cover some of the basic changes that need to be made but I cannot include every detail in this documentation.
-- Downloading a file transfer application like WinSCP for secure file transfer may make things easier to understand the Linux file structure. You can also use the `nano` text editor inside Ubuntu to copy and paste the raw file data and save it that way. This will require you to create directories and files with the CLI.
+Downloading a file transfer application like WinSCP for secure file transfer may make things easier to understand the Linux file structure. You can also use the `nano` text editor inside Ubuntu to copy and paste the raw file data and save it that way. This will require you to create directories and files with the CLI.
 I constructed the following file structure in Linux to prepare before moving the configuration files.
 
 - home/blaine/
@@ -166,8 +165,6 @@ I constructed the following file structure in Linux to prepare before moving the
   - docker-compose/
     - grafana-monitoring/
       - docker-compose.yaml
-
-This was not explained by the user that provided the docker-compose file. It took some time and troubleshooting for me to understand why this structure was needed. 
 
 ## Building the containers with `docker compose`
 I then went to the /docker-compose/grafana-monitoring/ directory because that is where our compose file is placed. Then I ran the compose file  to build the containers in detached mode using the command.
