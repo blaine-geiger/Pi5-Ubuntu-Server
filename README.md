@@ -1,4 +1,15 @@
 # Pi5-Ubuntu-Server
+<details>
+<summary>🔎Click to Reveal Essential Topics 🔍</summary>
+
+- Headless Ubuntu server configuration
+- Linux CLI and system study
+- Docker
+- Containerized services
+- docker-compose files
+- yaml and other config files
+
+</details>
 
 ## Building a Raspberry Pi 5 Ubuntu Server
 Using a Raspberry Pi 5 (8GB RAM) single board computer, I will configure a server on the home lab subnet created thus far. On this server I plan to set up network services for my local network. The services will provide monitoring and data collection of my lab network, devices, and the server device itself. 
