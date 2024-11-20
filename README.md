@@ -11,38 +11,7 @@
 
 </details>
 
-## Building a Raspberry Pi 5 Ubuntu Server
-Using a Raspberry Pi 5 (8GB RAM) single board computer, I will configure a server on the home lab subnet created thus far. On this server I plan to set up network services for my local network. The services will provide monitoring and data collection of my lab network, devices, and the server device itself. 
 > **Note:** I am somewhat regretful about choosing the Pi 5 for this project. I have considered using another mini PC with an x86 architecture instead of the ARM64 that the Pi offers. While the ARM64 offers many native application solutions from official distributions to community built projects, the x86 architecture is superior for compatibility and performance, including the ability to run enterprise level applications.
-
-Mini PCs are also expandable in terms of memory and storage, while having comparable performance at an arguably similar price point. Although they use slightly more power, I feel it is worth the gain in performance. I may convert this work over to an x86 setup later, but for the time being this project will offer valuable experience.
-
-> **Note:** In a later project, I will discuss security configurations that I have used to harden these services. Including a reverse proxy service (for encryption and SSL certificate management)
-
-## Hardware Assembly
-The Pi 5 is a single board computer with better specifications than previous models. Some important features include:
-- 2.4GHz quad-core 64-bit Arm Cortex-A76 CPU
-- 8GB RAM LPDDR4X-4267 SDRAM
-- 2 × USB 3.0 ports
-- 2 × USB 2.0 ports
-- Gigabit Ethernet, with PoE+ support (requires additional HAT)
-
-In this section I will simply place the Pi 5 board into a case to protect it. The case also includes a fan for better cooling under workload. The Pi 5 board and case are seen below in the figure below. The fan unit is built into the casing mold and can be identified by the wiring. All black portions are made of aluminum, which serves as a great heatsink.
-
-<p align="center">
-  <br/>
-  <img src="https://i.imgur.com/7o78bjB.png" height="80%" width="80%" alt="Pi 5 board and case"/><br /><br />
-</p>
-
-In the following image, the Pi 5 board has been placed in the chassis casing and the fan wiring has been plugged in to the appropriate port. The wiring has been carefully placed in a channel that guides the cable from where it exits the fan at A, then follows the wiring channel along B, and finally exits at C, to plug into the fan port on the Pi board.
-
-<p align="center">
-  <br/>
-  <img src="https://i.imgur.com/BFUJWKt.png" height="80%" width="80%" alt="Pi 5 assembled with case"/><br /><br />
-</p>
-
-The two images above show the bottom of the casing (colored red) and how it leaves access to the SD card slot exposed. This can be covered with a small plastic lid and affixed with a screw. Finally, the last image shows the completed case construction, which can be opened for access by the two black screws on top.
-
 
 # Installing Ubuntu Server
 The goal of this phase of the project is to install Ubuntu Server OS onto a Raspberry Pi 5 hardware device and use that server to run monitoring services that will provide information about our network, devices (if they are configured to be scraped for data), security, configurations, resource utilization, docker container data, and our server itself. It is a large project and will be an ongoing process, but I plan to get the basic foundations completed.
@@ -164,7 +133,6 @@ I constructed the following file structure in Linux to prepare before moving the
   - docker/
     - grafana-monitoring/
       - grafana
-      - graphite
       - influxDB
       - loki
       - prometheus
@@ -210,6 +178,7 @@ Navigating to the Portainer webGUI I can see that all the containers are running
   <img src="https://i.imgur.com/iVTv9Mv.png" height="80%" width="80%" alt="Portainer web GUI"/><br /><br />
 </p>
 
+> **Note:** In a later project, I will discuss security configurations that I have used to harden these services. Including a reverse proxy service (for encryption and SSL certificate management)
 
 ## Grafana
 This will serve as our main visualization application and the location for building our dashboards. It does not do any collection or scraping of data. Grafana serves as a platform to push data and metrics into and a tool to visualize it in an organized format. An image of a Grafana dashboard will be examined later to demonstrate its visualization capabilities.
@@ -273,10 +242,7 @@ The figure shown below is the custom dashboard creating by using Grafana to visu
 </p>
 
 
-This is all very customizable and this documentation only scratches the surface of what is possible. I plan to coordinate the other services to organize other data like SIEM, firewall logging, network performance, and configuration changes. Two containers are not running (Loki and Promtail), and I know this from the logs available in Portainer which read:
-- Unable to parse config: `/etc/promtail/promtail-config.yml` does not exist, set config.file for custom config path
-- Failed parsing config: `/etc/loki/loki-config.yml` does not exist, set config.file for custom config path
-These containers need further configuration work, which I plan to perform in the future.
+This is all very customizable and this documentation only scratches the surface of what I have accomplished. I have coordinated other services to scrape and ingest other data like a lightweight SIEM, firewall logging, network performance, and configuration changes.
 
 References
 - https://github.com/grafana
