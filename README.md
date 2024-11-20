@@ -280,7 +280,6 @@ These containers need further configuration work, which I plan to perform in the
 
 References
 - https://github.com/grafana
-- https://github.com/JamesTurland/JimsGarage/tree/main/Grafana-Monitoring
 - https://github.com/influxdata/telegraf/releases
 - https://github.com/prometheus/prometheus/releases
 - https://hub.docker.com/layers/grafana/promtail/master-b652f0a-arm64/images/sha256-3ee38cc0306e6d22e42d6af238236289a44229a906efbec2da4285e0a7e984d7?context=explore 
