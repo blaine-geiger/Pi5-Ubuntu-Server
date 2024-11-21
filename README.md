@@ -48,7 +48,7 @@ In the figure below, I can see the SSH connection is made to the headless server
 
 <p align="center">
   <br/>
-  <img src="https://i.imgur.com/oEguRC8.png" height="80%" width="80%" alt="SSH connection to server"/><br /><br />
+  <img src="https://i.imgur.com//oEguRC8" height="80%" width="80%" alt="SSH connection to server"/><br /><br />
 </p>
 
 
