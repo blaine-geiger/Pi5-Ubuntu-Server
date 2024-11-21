@@ -45,11 +45,14 @@ This is a headless configuration (there is no display connected to the Pi server
 
 In the figure below, I can see the SSH connection is made to the headless server. Note the IP address has been given by the DHCP server for the lab subnet. Which is subnet 192.168.x.x /24. I will change this IP in the next steps.
 
+<div align="center">
 
-<p align="center">
-  <br/>
-  <img src="https://i.imgur.com//oEguRC8" height="80%" width="80%" alt="SSH connection to server"/><br /><br />
-</p>
+![ssh into server](https://raw.githubusercontent.com/blaine-geiger/images/3f18a8c110a3d96f5347177cea7b1d80fc97909d/ssh_in.png)
+
+</div>
+
+
+
 
 
 
@@ -153,11 +156,10 @@ This will build the containers and place all other related files into the struct
 
 
 <p align="center">
-  <br/>
-  <img src="https://i.imgur.com/OOyEGh3.png" height="80%" width="80%" alt="Directory structure on server"/><br /><br />
+
+![containers_started](https://github.com/user-attachments/assets/b550f673-e767-4997-b95a-b441a102de45)
+
 </p>
-
-
 
 Then I navigated to the portainer GUI from earlier to review the containers I just created, check their logs, and ensure that they were functioning. They were running but not communicating properly. By troubleshooting I realized that I needed to change some of the following items:
 
@@ -174,8 +176,9 @@ Navigating to the Portainer webGUI I can see that all the containers are running
 
 
 <p align="center">
-  <br/>
-  <img src="https://i.imgur.com/iVTv9Mv.png" height="80%" width="80%" alt="Portainer web GUI"/><br /><br />
+
+![portainer](https://github.com/user-attachments/assets/be789412-e7f9-4c16-964d-c20c7b327544)
+
 </p>
 
 > **Note:** In a later project, I will discuss security configurations that I have used to harden these services. Including a reverse proxy service (for encryption and SSL certificate management)
@@ -195,8 +198,9 @@ In the following image I can see that InfluxDB can be used to visualize some dat
 
 
 <p align="center">
-  <br/>
-  <img src="https://i.imgur.com/pnIRg2j.png" height="80%" width="80%" alt="InfluxDB GUI"/><br /><br />
+
+![InfluxDB](https://github.com/user-attachments/assets/c3f33d3a-57f0-401a-a3dc-b97f68dcaeac)
+
 </p>
 
 
@@ -237,8 +241,9 @@ The figure shown below is the custom dashboard creating by using Grafana to visu
 
 
 <p align="center">
-  <br/>
-  <img src="https://i.imgur.com/a13v0fb.png" height="80%" width="80%" alt="Grafana Docker dashboard for container metrics"/><br /><br />
+  
+![grafana](https://github.com/user-attachments/assets/f182f846-c086-4618-a75b-2ce1f464ab08)
+
 </p>
 
 
