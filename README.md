@@ -188,7 +188,7 @@ This will serve as our main visualization application and the location for build
 
 ## InfluxDB
 InfluxDB serves as a time series database (TSDB). It manages large amounts of data and metrics. The information that is held in InfluxDB will later be acted upon by Grafana to build the dashboard interfaces. InfluxDB does not collect the data itself. That is what Telegraf (as well as Prometheus) will be used to do.
-- Go to the InfluxDB webGUI addres
+- Go to the InfluxDB webGUI address
 - Create name and password
 - Add an organization name and bucket name
 - Create API token (copy and paste into notepad, the key can only be viewed once)
