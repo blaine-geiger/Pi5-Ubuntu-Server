@@ -11,7 +11,7 @@
 
 </details>
 
-> **Note:** I am somewhat regretful about choosing the Pi 5 for this project. I have considered using another mini PC with an x64 architecture instead of the ARM64 that the Pi offers. While the ARM64 offers many native application solutions from official distributions to community built projects, the x64 architecture is superior for compatibility and performance, including the ability to run enterprise level applications.
+> **Note:** I am reconsidering my choice of the Pi 5 for this project. While the Pi does offer a 64-bit ARM architecture with robust support from official distributions to community built projects, I'm now considering it a better option to use a mini-PC with x86-64 (x64) architecture, such as Intel or AMD. These would offer greater compatibility and performance, the ability to run enterprise level applications, and a broader range of Docker containers without being constrained by architecture.
 
 # Installing Ubuntu Server
 The goal of this phase of the project is to install Ubuntu Server OS onto a Raspberry Pi 5 hardware device and use that server to run monitoring services that will provide information about our network, devices (if they are configured to be scraped for data), security, configurations, resource utilization, docker container data, and our server itself. It is a large project and will be an ongoing process, but I plan to get the basic foundations completed.
